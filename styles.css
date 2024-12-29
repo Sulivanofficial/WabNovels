@@ -217,7 +217,8 @@ article p {
   font-size: 18px;
 }
 .chapter-item a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: rgb(140, 140, 220);
 }
 
 /* Rodapé */
