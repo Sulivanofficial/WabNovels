@@ -4,43 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" href="../../images/site_icon.png" type="image/png" />
-    <title>
-      Obtaining 10x rewards! Reincarnated into a novel as a side-character!
-    </title>
+    <link rel="icon" href="../../../images/site_icon.png" type="image/png" />
+    <title>Defaut novel</title>
     <link rel="stylesheet" href="../../styles.css" />
-    <script>
-      // JavaScript para manipular a navegação
-      document.addEventListener("DOMContentLoaded", function () {
-        // Obter o nome do arquivo atual da URL
-        const currentPage = window.location.pathname.split("/").pop(); // Ex: "chapter_1.html"
-
-        // Extrair o número do capítulo (sem a extensão do arquivo)
-        const chapterNumber = currentPage.match(/\d+/)[0]; // Ex: "1"
-
-        // Encontrar os botões de navegação
-        const previousButton = document.querySelector(".previous");
-        const nextButton = document.querySelector(".next");
-
-        // Definir os links dos botões de navegação com base no capítulo atual
-        previousButton.href = `chapter_${parseInt(chapterNumber) - 1}.html`; // Link do capítulo anterior
-        nextButton.href = `chapter_${parseInt(chapterNumber) + 1}.html`; // Link do próximo capítulo
-
-        // Se for o primeiro capítulo, desabilitar o botão "Previous"
-        if (chapterNumber === "1") {
-          previousButton.style.pointerEvents = "none";
-          previousButton.style.opacity = "0.5";
-        }
-      });
-    </script>
   </head>
   <body>
     <!-- Cabeçalho -->
     <header>
       <div class="container">
-        <h1>
-          Obtaining 10x rewards! Reincarnated into a novel as a side-character!
-        </h1>
+        <h1>Defaut novel</h1>
         <nav>
           <a href="../../index.html">Home</a>
 

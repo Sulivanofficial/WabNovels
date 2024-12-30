@@ -152,6 +152,8 @@ article p {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .novel-item {
@@ -197,28 +199,37 @@ article p {
 }
 
 /* Estilo da Lista de capitulos */
+
+.chapters-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 4 colunas */
+  gap: 20px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.chapter-column {
+  width: 100%;
+}
 .chapter-list {
   list-style-type: none;
-  margin-top: 0px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  padding: 0;
 }
 .chapter-item {
   background-color: #fff;
-  margin: 2px 0;
+  margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .chapter-item a {
   text-decoration: none;
-  color: #333;
+  color: #007bff;
   font-size: 18px;
 }
 .chapter-item a:hover {
-  text-decoration: none;
-  color: rgb(140, 140, 220);
+  text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+  color: #0056b3; /* Você pode também mudar a cor ao passar o mouse, se desejar */
 }
 
 /* Rodapé */
