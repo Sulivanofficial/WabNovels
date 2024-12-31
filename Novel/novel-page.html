@@ -23,75 +23,7 @@
     <h2>Available Novels</h2>
     <main class="container">
       <ul class="novel-list">
-        <!-- Exemplo de Novel 1: Saiyan legend dragon ball -->
-        <li class="novel-item">
-          <img
-            src="https://www.fanmtl.com/d/file/cover_69/vs0ngxykb0k.jpg"
-            alt="Capa Novel 1"
-            class="novel-cover"
-          />
-          <h3>
-            <a
-              href="Saiyan-legend-dragon-ball/Saiyan-legend-dragon-ball-01-10.html"
-              >Saiyan legend dragon ball</a
-            >
-          </h3>
-          <p class="novel-rating">Nota: -/5</p>
-          <p>Sem descrição.</p>
-        </li>
-
-        <!-- Exemplo de Novel 2: Pokémon: I Become Pikachu-->
-        <li class="novel-item">
-          <img
-            src="https://www.fanmtl.com/d/file/cover_69/hhgq1ai0kwm.jpg"
-            alt="Capa Novel 2"
-            class="novel-cover"
-          />
-          <h3>
-            <a href="Pokémon-I-Become-Pikachu/Pokémon-I-Become-Pikachu-1.html"
-              >Pokémon: I Become Pikachu</a
-            >
-          </h3>
-          <p class="novel-rating">Nota: -/5</p>
-          <p>Sem descrição.</p>
-        </li>
-
-        <!-- Exemplo de Novel 3: Obtaining 10x rewards! Reincarnated into a novel as a side-character! -->
-        <li class="novel-item">
-          <img
-            src="https://book-pic.webnovel.com/bookcover/29001957008012805?imageMogr2/thumbnail/600x&imageId=1714062589277"
-            alt="Capa Novel 3"
-            class="novel-cover"
-          />
-          <h3>
-            <a
-              href="Obtaining-10x-rewards-Reincarnated-into-a-novel-as-a-side-character/main.html"
-              >Obtaining 10x rewards! Reincarnated into a novel as a
-              side-character!</a
-            >
-          </h3>
-          <p class="novel-rating">Nota: 4.5/5</p>
-          <p>Sem descrição.</p>
-        </li>
-
-        <!-- Exemplo de Novel 4: In My Hero Academia with a Jujutsu Kaisen Gacha System -->
-        <li class="novel-item">
-          <img
-            src="https://book-pic.webnovel.com/bookcover/30822521908102905?imageMogr2/thumbnail/600x&imageId=1734388245464"
-            alt="Capa Novel 4"
-            class="novel-cover"
-          />
-          <h3>
-            <a
-              href="In-My-Hero-Academia-with-a-Jujutsu-Kaisen-Gacha-System/In-My-Hero-Academia-with-a-Jujutsu-Kaisen-Gacha-System-01-10.html"
-              >In My Hero Academia with a Jujutsu Kaisen Gacha System</a
-            >
-          </h3>
-          <p class="novel-rating">Nota: 4.2/5</p>
-          <p>Sem descrição.</p>
-        </li>
-
-        <!-- Exemplo de Novel 5 -->
+        <!-- Os itens de novel serão gerados dinamicamente aqui -->
       </ul>
     </main>
 
@@ -100,5 +32,63 @@
         <p>&copy; 2024 Novel Library. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      // Função para carregar o arquivo JSON e gerar os itens das novels no HTML
+      async function loadNovels() {
+        try {
+          // Fazendo a requisição para carregar o arquivo JSON
+          const response = await fetch("dataNovels.json"); // Caminho para o arquivo JSON
+          const novelsData = await response.json(); // Convertendo a resposta para JSON
+
+          // Seleciona a lista de novels onde os itens serão adicionados
+          const novelList = document.querySelector(".novel-list");
+
+          // Criando e adicionando os itens para cada novel no JSON
+          novelsData.forEach((novel) => {
+            // Criação de um novo item de lista
+            const novelItem = document.createElement("li");
+            novelItem.classList.add("novel-item");
+
+            // Criação da imagem
+            const novelImg = document.createElement("img");
+            novelImg.classList.add("novel-cover");
+            novelImg.src = novel.imgUrl;
+            novelImg.alt = `Capa de ${novel.name}`;
+
+            // Criação do título
+            const novelTitle = document.createElement("h3");
+            const titleLink = document.createElement("a");
+            titleLink.href = novel.link;
+            titleLink.textContent = novel.name;
+            novelTitle.appendChild(titleLink);
+
+            // Criação da nota
+            const novelRating = document.createElement("p");
+            novelRating.classList.add("novel-rating");
+            novelRating.textContent = `Nota: ${novel.rating}`;
+
+            // Criação da descrição
+            const novelDescription = document.createElement("p");
+            novelDescription.textContent = novel.description;
+
+            // Adicionando os elementos criados ao item da lista
+            novelItem.appendChild(novelImg);
+            novelItem.appendChild(novelTitle);
+            novelItem.appendChild(novelRating);
+            novelItem.appendChild(novelDescription);
+
+            // Adicionando o item à lista de novels
+            novelList.appendChild(novelItem);
+          });
+        } catch (error) {
+          console.error("Erro ao carregar as informações das novels:", error);
+        }
+      }
+
+      // Chama a função para carregar os dados assim que a página for carregada
+      document.addEventListener("DOMContentLoaded", loadNovels);
+    </script>
+    <!-- Inclua o script -->
   </body>
 </html>
