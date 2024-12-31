@@ -1,4 +1,4 @@
-/* Estilos Globais */
+/* Estilos Globais ----------------------------------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ body {
   padding: 20px;
 }
 
-/* Cabeçalho */
+/* Cabeçalho ----------------------------------------------------------------------------*/
 header {
   background-color: #1c1c1c;
   color: white;
@@ -46,7 +46,7 @@ header nav a:hover {
   color: #f1f1f1;
 }
 
-/* Layout Principal */
+/* Layout Principal ----------------------------------------------------------------------------*/
 main {
   display: flex;
   margin-top: 40px;
@@ -96,7 +96,7 @@ article p {
   margin-bottom: 15px;
 }
 
-/* Texto da Novel */
+/* Texto da Novel ----------------------------------------------------------------------------*/
 .novel-text {
   background-color: white;
   padding: 20px;
@@ -116,7 +116,7 @@ article p {
   line-height: 1.8;
 }
 
-/* Botões de Navegação */
+/* Botões de Navegação ----------------------------------------------------------------------------*/
 .novel-navigation {
   display: flex;
   justify-content: space-between;
@@ -145,60 +145,74 @@ article p {
   text-align: right;
 }
 
-/* Estilo da Lista de Novels */
+/* Estilo da Lista de Novels ----------------------------------------------------------------------------*/
 .novel-list {
   list-style-type: none;
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
   gap: 20px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/* Estilo dos Itens da Lista de Novels */
 .novel-item {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  text-align: center;
+  display: flex; /* Usamos Flexbox para alinhar os itens lado a lado */
+  gap: 15px; /* Espaçamento entre a imagem e as informações */
   transition: transform 0.3s;
 }
 
+/* Efeito de Hover nos Itens */
 .novel-item:hover {
   transform: translateY(-5px);
 }
 
+/* Estilo da Imagem das Novels */
 .novel-cover {
-  width: 100%;
+  width: 120px; /* Tamanho fixo para a imagem */
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.novel-item h3 {
-  font-size: 1.2rem;
-  margin-top: 15px;
+/* Estilo do Conteúdo à Direita da Imagem */
+.novel-content {
+  flex-grow: 1; /* Faz com que o conteúdo à direita ocupe o espaço restante */
+  text-align: left; /* Alinha o texto à esquerda */
 }
 
+/* Estilo do Título das Novels */
+.novel-item h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+/* Estilo do Link do Título */
 .novel-item a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
 }
 
+/* Estilo da Nota */
 .novel-item .novel-rating {
   margin-top: 10px;
   color: #f39c12;
 }
 
+/* Estilo da Descrição */
 .novel-item p {
   margin-top: 10px;
   font-size: 0.9rem;
   color: #777;
 }
 
-/* Estilo da Lista de capitulos */
+/* Estilo da Lista de capitulos ----------------------------------------------------------------------------*/
 
 .chapters-container {
   display: grid;
@@ -232,7 +246,7 @@ article p {
   color: #0056b3; /* Você pode também mudar a cor ao passar o mouse, se desejar */
 }
 
-/* Rodapé */
+/* Rodapé ----------------------------------------------------------------------------*/
 footer {
   background-color: #333;
   color: white;

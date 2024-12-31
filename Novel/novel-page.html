@@ -56,6 +56,10 @@
             novelImg.src = novel.imgUrl;
             novelImg.alt = `Capa de ${novel.name}`;
 
+            // Criação de um novo item de lista
+            const novelContent = document.createElement("div");
+            novelItem.classList.add("novel-content");
+
             // Criação do título
             const novelTitle = document.createElement("h3");
             const titleLink = document.createElement("a");
@@ -73,10 +77,11 @@
             novelDescription.textContent = novel.description;
 
             // Adicionando os elementos criados ao item da lista
+            novelContent.appendChild(novelTitle);
+            novelContent.appendChild(novelRating);
+            novelContent.appendChild(novelDescription);
             novelItem.appendChild(novelImg);
-            novelItem.appendChild(novelTitle);
-            novelItem.appendChild(novelRating);
-            novelItem.appendChild(novelDescription);
+            novelItem.appendChild(novelContent);
 
             // Adicionando o item à lista de novels
             novelList.appendChild(novelItem);
