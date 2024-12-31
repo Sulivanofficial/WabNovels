@@ -96,6 +96,58 @@ article p {
   margin-bottom: 15px;
 }
 
+/* Estilo da Lista de funções no sistema ----------------------------------------------------------------------------*/
+.system-list {
+  list-style-type: none;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.system-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.system-item:hover {
+  transform: translateY(-5px);
+}
+
+.system-cover {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.system-item h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.system-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.system-item .system-rating {
+  margin-top: 10px;
+  color: #f39c12;
+}
+
+.system-item p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #777;
+}
 /* Texto da Novel ----------------------------------------------------------------------------*/
 .novel-text {
   background-color: white;
