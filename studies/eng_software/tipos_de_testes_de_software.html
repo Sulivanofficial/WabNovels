@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa de Estudo - Concurso Banco do Brasil</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      .section {
+        margin-bottom: 30px;
+      }
+      .section ul {
+        margin-left: 20px;
+      }
+      .tips {
+        background-color: #ecf0f1;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #bdc3c7;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><strong>Tipos de Testes de Software</strong></h2>
+
+    <p>
+      O teste de software é uma etapa essencial no processo de desenvolvimento,
+      pois assegura que o sistema funcione conforme o esperado, atenda aos
+      requisitos definidos e ofereça qualidade ao usuário final. Existem vários
+      tipos de testes, cada um com um foco e objetivo específicos.
+    </p>
+
+    <hr />
+
+    <h3>🔹 <strong>1. Teste de Unidade (Unit Test)</strong></h3>
+    <ul>
+      <li>
+        <strong>Objetivo:</strong> Verificar se
+        <strong>a menor parte testável do sistema</strong> (como funções,
+        métodos ou classes) está funcionando corretamente.
+      </li>
+      <li><strong>Realizado por:</strong> Desenvolvedores.</li>
+      <li>
+        <strong>Foco:</strong> Lógica interna de métodos e validação de
+        resultados esperados.
+      </li>
+      <li>
+        <strong>Ferramentas comuns:</strong> JUnit (Java), NUnit (.NET), PyTest
+        (Python).
+      </li>
+    </ul>
+
+    <hr />
+
+    <h3>🔹 <strong>2. Teste de Integração</strong></h3>
+    <ul>
+      <li>
+        <strong>Objetivo:</strong> Testar a
+        <strong
+          >comunicação e interação entre diferentes módulos ou
+          componentes</strong
+        >
+        do sistema.
+      </li>
+      <li><strong>Realizado por:</strong> Desenvolvedores ou testadores.</li>
+      <li>
+        <strong>Exemplo:</strong> Verificar se o módulo de login funciona
+        corretamente com o módulo de autenticação e banco de dados.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h3>🔹 <strong>3. Teste de Sistema</strong></h3>
+    <ul>
+      <li>
+        <strong>Objetivo:</strong> Verificar se o
+        <strong>sistema completo</strong> atende aos requisitos funcionais e não
+        funcionais.
+      </li>
+      <li><strong>Realizado por:</strong> Equipe de QA/testes.</li>
+      <li>
+        <strong>Inclui:</strong> Testes de desempenho, segurança,
+        compatibilidade, entre outros.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h3>🔹 <strong>4. Teste de Aceitação</strong></h3>
+    <ul>
+      <li>
+        <strong>Objetivo:</strong> Confirmar se o sistema
+        <strong>atende às expectativas do cliente ou usuário final</strong>.
+      </li>
+      <li>
+        <strong>Realizado por:</strong> Cliente, usuário ou equipe de negócio.
+      </li>
+      <li>
+        <strong>Tipos:</strong>
+        <ul>
+          <li><strong>Teste de Aceitação do Usuário (UAT)</strong></li>
+          <li>
+            <strong>Teste Alfa/Beta</strong> (realizado antes do lançamento
+            oficial)
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h3>🔹 <strong>5. Teste de Regressão</strong></h3>
+    <ul>
+      <li>
+        <strong>Objetivo:</strong> Garantir que
+        <strong>funcionalidades já existentes continuam funcionando</strong>
+        após mudanças no código (como correções ou novas funcionalidades).
+      </li>
+      <li>
+        <strong>Observação:</strong> Pode ser <strong>automatizado</strong> para
+        facilitar a repetição constante.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>⚙️ <strong>Técnicas de Teste: Caixa Preta vs. Caixa Branca</strong></h2>
+
+    <h3>▶ <strong>Teste de Caixa Preta</strong></h3>
+    <ul>
+      <li>
+        <strong>Descrição:</strong> O testador
+        <strong>não tem conhecimento do código-fonte</strong>.
+      </li>
+      <li>
+        <strong>Foco:</strong> Entrada e saída — testa se a funcionalidade
+        entrega os resultados esperados.
+      </li>
+      <li>
+        <strong>Vantagens:</strong>
+        <ul>
+          <li>Simula o ponto de vista do usuário.</li>
+          <li>Útil para testes funcionais.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Exemplo:</strong> Testar se o botão de “enviar” funciona
+        corretamente.
+      </li>
+    </ul>
+
+    <h3>▶ <strong>Teste de Caixa Branca</strong></h3>
+    <ul>
+      <li>
+        <strong>Descrição:</strong> O testador
+        <strong>tem acesso e conhecimento do código-fonte</strong>.
+      </li>
+      <li>
+        <strong>Foco:</strong> Caminhos internos, estruturas de decisão e fluxos
+        lógicos.
+      </li>
+      <li>
+        <strong>Vantagens:</strong>
+        <ul>
+          <li>Permite cobrir cenários ocultos e identificar falhas lógicas.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Exemplo:</strong> Verificar se todas as instruções de um
+        <code>if</code> foram executadas ao menos uma vez.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>✅ <strong>Resumo em Tabela</strong></h2>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Tipo de Teste</th>
+          <th>O que testa?</th>
+          <th>Realizado por</th>
+          <th>Quando aplicar?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Teste de Unidade</td>
+          <td>Funções, métodos, pequenas partes</td>
+          <td>Desenvolvedores</td>
+          <td>Durante a codificação</td>
+        </tr>
+        <tr>
+          <td>Teste de Integração</td>
+          <td>Comunicação entre módulos</td>
+          <td>Devs ou QA</td>
+          <td>Após a implementação de módulos</td>
+        </tr>
+        <tr>
+          <td>Teste de Sistema</td>
+          <td>Comportamento do sistema completo</td>
+          <td>QA/Testadores</td>
+          <td>Antes da entrega</td>
+        </tr>
+        <tr>
+          <td>Teste de Aceitação</td>
+          <td>Requisitos e experiência do usuário</td>
+          <td>Cliente/usuário</td>
+          <td>Fim do desenvolvimento</td>
+        </tr>
+        <tr>
+          <td>Teste de Regressão</td>
+          <td>Funcionalidades existentes</td>
+          <td>QA com apoio de automação</td>
+          <td>Após cada modificação no sistema</td>
+        </tr>
+        <tr>
+          <td>Caixa Preta</td>
+          <td>Funcionalidades sem ver o código</td>
+          <td>QA/Testadores</td>
+          <td>Testes funcionais e de aceitação</td>
+        </tr>
+        <tr>
+          <td>Caixa Branca</td>
+          <td>Caminhos internos do código</td>
+          <td>Desenvolvedores/QA</td>
+          <td>Testes estruturais, unitários</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
